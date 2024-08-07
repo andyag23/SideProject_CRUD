@@ -26,6 +26,26 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <!-- 新增登出功能 -->
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        @if (Context.Request.Cookies.ContainsKey("Username"))
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">Hello, @Context.Request.Cookies["Username"]</span>
+                            </li>
+                            <li class="nav-item">
+                                <form method="post" asp-controller="Home" asp-action="Logout" class="nav-link text-dark m-0 p-0">
+                                    <button type="submit" class="btn btn-link">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        }
+                    </ul>
                 </div>
             </div>
         </nav>

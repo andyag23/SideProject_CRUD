@@ -23,6 +23,13 @@ namespace MVC_SliedProject.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("Username");
+            return RedirectToAction("Login", "Login");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
