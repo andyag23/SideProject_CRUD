@@ -23,7 +23,7 @@ public class AssetRepository : IAssetRepository
 
             // 調用存儲過程
             return await dbConnection.QueryAsync<Asset>(
-                "usp_AssetsGet",  // 存儲過程名稱
+                "GetAssets",  // 存儲過程名稱
                 parameters,
                 commandType: CommandType.StoredProcedure);
         }

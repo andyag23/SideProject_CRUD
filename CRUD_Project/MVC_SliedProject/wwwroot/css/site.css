@@ -16,3 +16,20 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-group .btn.active {
+    background-color: #007bff;
+    color: #fff;
+}

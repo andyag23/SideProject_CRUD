@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-
-public class Startup
+﻿public class Startup
 {
     public Startup(IConfiguration configuration)
     {
@@ -15,8 +9,11 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        // 註冊 AssetRepository
+        services.AddScoped<IAssetRepository>(provider =>
+            new AssetRepository(Configuration.GetConnectionString("DefaultConnection")));
+
         services.AddControllersWithViews();
-        // 添加你的其他服務
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
