@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{D227703F-C3CC-4CC0-AD08-909B1B768C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_SideProject", "MVC_SliedProject\MVC_SideProject.csproj", "{C5745C4E-64AE-4D4B-B50E-36761946FF3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_SideProject", "MVC_SideProject\MVC_SideProject.csproj", "{C5745C4E-64AE-4D4B-B50E-36761946FF3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

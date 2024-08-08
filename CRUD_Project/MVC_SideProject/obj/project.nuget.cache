@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KOuHcD7oQ/qFmQ1Qo5jKaO1y4SUgo0qLKpqN66cZiR3T6zSyW4VbxIEvFYyrMtSKslfNdlc3kWxQz3b38bX4dA==",
+  "dgSpecHash": "5GtiQJTrM1cwBYRfx1dSU5vkXq0RBD7r40vxIjSR5iFoVyIDvq6ugK7Yap47DB8h+OxqQ0BEGPhqbvvyuL8PNw==",
   "success": true,
-  "projectFilePath": "F:\\SlideProject\\CRUD_Project\\MVC_SliedProject\\MVC_SideProject.csproj",
+  "projectFilePath": "F:\\SlideProject\\CRUD_Project\\MVC_SideProject\\MVC_SideProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\s9303\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\s9303\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
