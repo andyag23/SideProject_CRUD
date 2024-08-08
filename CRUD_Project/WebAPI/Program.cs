@@ -1,25 +1,28 @@
-var builder = WebApplication.CreateBuilder(args);
+using System.Data;
+using Microsoft.Data.SqlClient;
+using WebAPI.Repository;
+using WebAPI.Service;
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+public class Program
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public static void Main(string[] args)
+    {
+        CreateHostBuilder(args).Build().Run();
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureServices((context, services) =>
+            {
+                // 配置 SQL Server 連接
+                services.AddScoped<IDbConnection>(provider =>
+                {
+                    var connectionString = context.Configuration.GetConnectionString("DefaultConnection");
+                    return new SqlConnection(connectionString);
+                });
+
+                // 配置其他服務
+                services.AddControllers();
+                services.AddScoped<IAssetRepository, AssetService>();
+            });
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();

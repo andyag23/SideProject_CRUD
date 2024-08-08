@@ -1977,9 +1977,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\SlideProject\\CRUD_Project\\MVC_SliedProject\\MVC_SliedProject.csproj",
-      "projectName": "MVC_SliedProject",
-      "projectPath": "F:\\SlideProject\\CRUD_Project\\MVC_SliedProject\\MVC_SliedProject.csproj",
+      "projectUniqueName": "F:\\SlideProject\\CRUD_Project\\MVC_SliedProject\\MVC_SideProject.csproj",
+      "projectName": "MVC_SideProject",
+      "projectPath": "F:\\SlideProject\\CRUD_Project\\MVC_SliedProject\\MVC_SideProject.csproj",
       "packagesPath": "C:\\Users\\s9303\\.nuget\\packages\\",
       "outputPath": "F:\\SlideProject\\CRUD_Project\\MVC_SliedProject\\obj\\",
       "projectStyle": "PackageReference",
